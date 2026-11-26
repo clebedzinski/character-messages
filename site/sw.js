@@ -1,4 +1,4 @@
-const SHELL = 'messages-shell-v4'
+const SHELL = 'messages-shell-v5'
 const AVATARS = 'messages-avatars-v1'
 const baseUrl = new URL('./', self.location.href)
 const base = baseUrl.pathname

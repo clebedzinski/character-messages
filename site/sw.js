@@ -1,10 +1,10 @@
-const SHELL = 'messages-shell-v3'
+const SHELL = 'messages-shell-v4'
 const AVATARS = 'messages-avatars-v1'
 const baseUrl = new URL('./', self.location.href)
 const base = baseUrl.pathname
 
 function isAvatarRequest(url) {
-  if (url.hostname === 'image.pollinations.ai' && url.pathname.startsWith('/prompt/')) return true
+  if (url.hostname === 'image.pollinations.ai' && url.pathname.startsWith('/prompt/') && url.searchParams.get('avatar') === '1') return true
   return url.origin === self.location.origin && url.pathname.startsWith(`${base}avatars/`) && url.pathname.endsWith('.webp')
 }
 
